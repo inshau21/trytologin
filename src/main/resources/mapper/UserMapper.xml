@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "mybatis-3-mapper.dtd">
+
+<mapper namespace="mygroup.myproject.UserMapper">
+    <!-- (能自訂)返回查詢結果時，每個資料表欄位對應的java變數名稱 -->
+    <resultMap id="my_UserModel_afterJoin" type="mygroup.myproject.UserModel_afterJoin">
+        <id property="id" column="id"/>
+        <result property="name" column="user_name"/>
+        <result property="class_" column="class"/>
+        <result property="book" column="book"/>
+        <result property="club_id" column="club_id"/>
+        <result property="club" column="club"/>
+        <result property="item" column="item"/>
+        <result property="fee" column="fee"/>
+    </resultMap>
+
+
+    <!-- 指定查詢一筆資料 -->
+    <select id="findById" resultType="mygroup.myproject.UserModel">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+    <!-- (join) 指定查詢一筆資料 -->
+    <select id="findById_byJoin" resultMap="my_UserModel_afterJoin">
+        SELECT * FROM user natural join clubs WHERE id = #{id}
+    </select>
+
+
+    <!-- 指定查詢全部的資料 -->
+    <select id="findAll" resultType="mygroup.myproject.UserModel">
+        SELECT * FROM user
+    </select>
+    <!-- (join) 指定查詢 join 之後的全部的資料 -->
+    <select id="findAll_byJoin" resultMap="my_UserModel_afterJoin">
+        select * from user natural join clubs;
+    </select>
+    
+    
+    <!-- 新增資料(一筆) -->
+    <insert id="insertUserModel">
+        INSERT INTO user(id,user_name,class,book,club_id) VALUES(#{id}, #{name}, #{class_}, #{book}, #{club_id})
+    </insert>
+    <!-- 新增資料(多筆) -->
+    <insert id="inserUserModelBatch">
+        INSERT INTO user(id,user_name,class,book,club_id) 
+        VALUES
+        <foreach collection="list_userModel" item="user" separator=",">
+            (#{user.id}, #{user.name}, #{user.class_}, #{user.book}, #{user.club_id})
+        </foreach>
+    </insert>
+    
+    
+    <!-- 修改資料(一筆) -->
+    <update id="updateUserModel">
+        update user
+        set class = #{class_},
+        book = #{book},
+        club_id = #{club_id}
+        where user_name = #{name};
+    </update>
+    
+</mapper>

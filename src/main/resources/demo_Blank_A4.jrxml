@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demo_Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12cda2d2-5172-41d7-a29d-febe5a7c1917">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="reportTitle" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="id" class="java.lang.Integer"/>
+	<parameter name="class_" class="java.lang.String"/>
+	<parameter name="book" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="class_" class="java.lang.String"/>
+	<field name="book" class="java.lang.String"/>
+	<field name="club_id" class="java.lang.Integer"/>
+	<field name="club" class="java.lang.String"/>
+	<field name="item" class="java.lang.String"/>
+	<field name="fee" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="19" width="400" height="40" uuid="6cb7a5b6-9488-4852-8442-c932b15e7d39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TaipeiSansTCBeta-Regular" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="10" width="100" height="30" uuid="e1ce508b-7daa-4bc5-bcf3-903b8873d631"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="10" width="70" height="30" uuid="901971d3-4008-4a67-b3f0-398eb9ecdf25"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="10" width="100" height="30" uuid="01aebaf2-a399-49c2-b78f-36e9ab898e20"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{class_}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="10" width="100" height="30" uuid="318583d4-0635-4047-85bb-3f2edaf08cec"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{book}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="14" width="150" height="36" uuid="e762bea5-3bc3-4e0e-abf0-78684a8edd71"/>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[mybatis的資料用報表顯示
+(顯示中文成功)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="30" uuid="fec0863e-6352-49a1-9aa2-3e9f28bbb1e1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f73fea04-c7d1-4722-9979-d241b0cb2748"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="100" height="30" uuid="d555d4cf-a76f-45c7-8da4-3837a348717b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="562a1dd9-1160-447b-8eb1-0f6cf55af226"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="70" height="30" uuid="a84afb98-8056-46c4-a260-3b380db88a16">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c6a4ab45-6e88-4fda-a016-8f9cc952c061"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[class_]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" uuid="b7c5a572-8476-4f29-a814-22c25caa02fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be941a98-11a4-4103-ab7e-cad096388e74"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[book]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="40" height="30" uuid="c17545f6-2a93-405c-b8e8-67318dae5cba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="721dac5a-9fbe-4015-a0cb-7ca3acb4298b"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[club_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="80" height="30" uuid="33048604-0401-4e93-ad4f-24e4653572cd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4266cc8b-6a99-48ff-9edc-566574c8036c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[club]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="90" height="30" uuid="3a68bcc6-03d5-4dfe-bdb3-d93e8b1747a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ade7e08-8437-49bf-997d-1c011ca03a78"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="0" width="65" height="30" uuid="59e86782-b3b5-4318-bdae-bbfd7a3c4fb3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a9b4048-cb0f-4f2c-984a-27650045f05c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fee]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="30" uuid="aa9a5fe0-0876-4b28-8179-1e1aa06acd32">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f73fea04-c7d1-4722-9979-d241b0cb2748"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="100" height="30" uuid="56f4c2c5-0b51-4577-bfb9-bedd71c78844">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="562a1dd9-1160-447b-8eb1-0f6cf55af226"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="70" height="30" uuid="b03892a1-7dc6-449a-aa01-09b3b9b8d79d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c6a4ab45-6e88-4fda-a016-8f9cc952c061"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{class_}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="30" uuid="61f8d69d-8347-4577-af4b-36940cc1d118">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be941a98-11a4-4103-ab7e-cad096388e74"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{book}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="40" height="30" uuid="ef22445a-f527-497c-a375-54e910a60a87">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="721dac5a-9fbe-4015-a0cb-7ca3acb4298b"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{club_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="80" height="30" uuid="db7c47b3-06eb-40b5-93e1-f251fadc3120">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4266cc8b-6a99-48ff-9edc-566574c8036c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{club}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="90" height="30" uuid="1eca4fcf-0602-4b54-b4ef-d4a24f66712e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ade7e08-8437-49bf-997d-1c011ca03a78"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="65" height="30" uuid="fa1a1576-b259-4134-a0ad-5f3f909d59fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a9b4048-cb0f-4f2c-984a-27650045f05c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="TaipeiSansTCBeta-Regular" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
